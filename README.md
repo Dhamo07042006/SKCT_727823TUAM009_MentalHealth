@@ -1,10 +1,10 @@
 # Mental Health Scoring (MLOps Assignment)
 
 ## Name
-Name
+Dhamodaran G
 
 ## Roll number
-123
+727823TUAM009
 
 ## Dataset
 Student Mental Health (Kaggle): https://www.kaggle.com/datasets/shariful07/student-mental-health
