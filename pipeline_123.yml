@@ -1,0 +1,26 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    python data_prep.py --roll_no 123
+  displayName: 'data_prep'
+  env:
+    MLFLOW_EXPERIMENT_NAME: 'SKCT_727823TUAM009_MentalHealth'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    python train_pipeline.py --roll_no 123 --experiment_name SKCT_727823TUAM009_MentalHealth
+  displayName: 'train'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    python evaluate.py --roll_no 123
+  displayName: 'evaluate'

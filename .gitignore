@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data
+data/raw/
+data/processed/
+
+# MLflow
+mlruns/
+
+# Artifacts / models
+models/
+artifacts/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
